@@ -557,7 +557,7 @@ impl Scalar {
     /// # }
     pub fn random<R: RngCore + CryptoRng>(rng: &mut R) -> Self {
         let mut scalar_bytes = [0u8; 64];
-        rng.fill_bytes(&mut scalar_bytes);
+        // rng.fill_bytes(&mut scalar_bytes);
         Scalar::from_bytes_mod_order_wide(&scalar_bytes)
     }
 
